@@ -22,7 +22,8 @@ def processDirectory(path, target, replacement)
 end
 
 if ARGV.size != 2
-  puts '<target> <replacement>'
+  puts 'Usage:'
+  puts "ruby #{File.basename(__FILE__)} <target> <replacement>"
   exit
 end
 
