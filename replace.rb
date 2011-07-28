@@ -7,6 +7,9 @@ def processDirectory(path, target, replacement)
   end
   directories, files = targets
   directories.each do |entry|
+    if entry.name == '.git'
+      next
+    end
     processDirectory(entry.path, target, replacement)
   end
 
